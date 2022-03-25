@@ -1,8 +1,5 @@
-programa
-{
-	
-	funcao inicio()
-	{
+programa{
+	funcao inicio(){
 		inteiro assentos[10][12], linha, coluna
 
 		//inicialização da matriz dos assentos 
@@ -12,6 +9,7 @@ programa
 			}
 		}
 		//repetir enquanto não for digitado um assento negativo
+		
 		faca{
 			//impressão da matriz dos assentos
 			escreva(" ASSENTOS DISPONÍVEIS \n")
@@ -39,7 +37,6 @@ programa
 			
 		}enquanto (linha >= 0 e coluna >= 0) //se um dos dois for negativo, ele sai do laço de repetição
 		
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -47,9 +44,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 555; 
+ * @POSICAO-CURSOR = 30; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {linha, 6, 28, 5}-{coluna, 6, 35, 6};
+ * @SIMBOLOS-INSPECIONADOS = {linha, 3, 28, 5}-{coluna, 3, 35, 6};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
