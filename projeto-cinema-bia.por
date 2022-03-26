@@ -23,7 +23,7 @@ programa{
 			leia(linha)
 			leia(coluna)
 
-			enquanto (linha >= 10 ou coluna >= 12 ou linha == 0 ou coluna == 0){
+			enquanto (linha > 10 ou coluna > 12 ou linha == 0 ou coluna == 0){
 				escreva("Assento inválido, digite novamente: (linha x coluna)\n")
 				leia(linha)
 				leia(coluna)
@@ -49,7 +49,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1109; 
+ * @POSICAO-CURSOR = 1069; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {linha, 3, 28, 5}-{coluna, 3, 35, 6};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
