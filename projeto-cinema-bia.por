@@ -1,6 +1,6 @@
-programa{
-	funcao inicio(){
-		inteiro assentos[10][12], linha, coluna
+programa{
+	funcao inicio(){
+		inteiro assentos[10][12], linha, coluna, a=0
 
 		//inicialização da matriz dos assentos 
 		para(inteiro i=0; i < 10; i++){
@@ -8,11 +8,10 @@ programa{
 				assentos[i][j] = 0
 			}
 		}
-		//repetir enquanto não for digitado um assento negativo
 		
 		faca{
 			//impressão da matriz dos assentos
-			escreva(" ASSENTOS DISPONÍVEIS \n")
+			escreva("       ASSENTOS       \n")
 			para(inteiro i=0; i < 10; i++){
 				para(inteiro j=0; j < 12; j++){
 					escreva(assentos[i][j], " ")
@@ -20,23 +19,29 @@ programa{
 			escreva("\n")
 			}
 			
-			escreva("\nDigite a linha (0 - 9) e a coluna (0 - 11) do assento desejado: \n")
+			escreva("\nDigite a linha (1 - 10) e a coluna (1 - 12) do assento desejado: \n")
 			leia(linha)
 			leia(coluna)
 
+			enquanto (linha > 10 ou coluna > 12 ou linha == 0 ou coluna == 0){
+				escreva("Assento inválido, digite novamente: (linha x coluna)\n")
+				leia(linha)
+				leia(coluna)
+			}
+
+			//condição de saida do looping
 			se (linha < 0 ou coluna < 0){
 				pare // interrompe o laço de repetição
 			}
 			
-			se(assentos[linha][coluna] == 0){
-				assentos[linha][coluna] = 1
+			se(assentos[linha-1][coluna-1] == 0){
+				assentos[linha-1][coluna-1] = 1
 				escreva("Assento reservado com sucesso!\n\n")
 			}senao{
 				escreva("O assento já foi reservado, favor escolher outro!\n\n")
 			}
-			
-		}enquanto (linha >= 0 e coluna >= 0) //se um dos dois for negativo, ele sai do laço de repetição
-		
+				
+		}enquanto (a==0) //looping 
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -44,7 +49,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 30; 
+ * @POSICAO-CURSOR = 1069; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {linha, 3, 28, 5}-{coluna, 3, 35, 6};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
