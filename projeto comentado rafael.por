@@ -13,7 +13,7 @@ programa
         }
 // ENQUANTO -> Roda em lop ate que a resposta final seja !=1 )
         enquanto(x==1){
-       escreva("os lugares vazios são:")
+       escreva("Os lugares vazios são:")
 // PARA -> algoritmo para mostrar ao usuario quantas "poltronas" estao disponiveis.
     para(inteiro i=0; i < 12; i++){
         escreva("\n")
@@ -23,14 +23,14 @@ programa
                }
            }
            // LER QUAL POLTRONA VC QUER RESERVAR
-               escreva("\nescolha um assento:")
+               escreva("\nEscolha um assento:\n")
                leia(linha,coluna)
 
 // SE -> DECLARA O VALOR 1 A POLTRONA ESCOLHIDA MAS SO RODA COM A CONDIÇÃO (se poltrona == 0 )
            se(cinema[linha-1][coluna-1] == 0){
                cinema[linha-1][coluna-1] = 1
                limpa()
-                   escreva("\nvocê comprou o assento:")
+                   escreva("\nVocê comprou o assento:")
 
 // PARA -> MOSTRA SUA POLTRONA RESERVADA E AS OUTRAS DISPONIVEIS
                    para(inteiro i=0; i < 12; i++){
@@ -47,22 +47,21 @@ programa
 
               }// SE o (se) for falso ele vem direto pra cá
               senao{
-                  escreva("esse assento ja foi comprado")
+                  escreva("Esse assento ja foi comprado")
              }
              //ultima condição para ver se o usuario sai ou continua no programa
-             escreva("\n\nvoce deseja comprar mais algum ingresso? 1 para sim,0 para não") 
+             escreva("\n\nVoce deseja comprar mais algum ingresso? 1 = sim,0 = não - ") 
              leia(x)
              limpa()
              }
         }
      }
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1831; 
+ * @POSICAO-CURSOR = 1752; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
