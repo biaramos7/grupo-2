@@ -45,7 +45,7 @@ programa
 			escreva(vagas[i])						
 		}
 	}
-		funcao verificacao (inteiro &opcao){				
+		funcao verificacaoEntrada (inteiro &opcao){				
 				se ( opcao >= 0 e opcao <= 30){					
 				escreva("Se dirija a vaga ", opcao,"\n")
 				se(vagas[opcao-1]==0){
@@ -72,7 +72,7 @@ programa
 		funcao entrada(){
 			escreva("Escolha uma vaga: (1-30)\n")
 			leia(opcao)
-			verificacao(opcao)		
+			verificacaoEntrada(opcao)		
 		}
 		funcao verficacaoSaida(){
 			se(opcao<1 ou opcao>30)
@@ -86,7 +86,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1385; 
+ * @POSICAO-CURSOR = 1507; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
