@@ -1,9 +1,9 @@
-programa{
+programa{
 
-	inteiro vagas[30] //vagas disponiveis
+	inteiro vagas[30] //vagas disponiveis
 	inteiro vagaDesejada
 
-	funcao inicio(){
+	funcao inicio(){
 
 		inteiro opcao, looping = 0
 		
@@ -61,6 +61,7 @@ programa{
 		enquanto(vagas[vagaDesejada-1]==0){
 			escreva("\nA vaga desejada já está ocupada, favor selecione outra: ")
 			leia(vagaDesejada)
+			validar(vagaDesejada)
 		}
 		limpa()
 		vagas[vagaDesejada-1] = 0
@@ -78,6 +79,7 @@ programa{
 		enquanto(vagas[vagaDesejada-1]!=0){
 			escreva("Não há veiculo na vaga informada, favor digitar outra: ")
 			leia(vagaDesejada)
+			validar(vagaDesejada)
 		}
 		
 		limpa()
@@ -104,13 +106,13 @@ programa{
 			leia(a)
 		}
 	}
-} 
+} 
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 857; 
+ * @POSICAO-CURSOR = 1835; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
