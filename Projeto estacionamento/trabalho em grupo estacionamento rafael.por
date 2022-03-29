@@ -62,6 +62,7 @@ programa
 			 verficacaoSaida()			 			 
 			 se(vagas[opcao-1]==1){
 			 escreva("Seu carro pode ser retirado\n")
+			 vagas[opcao-1] = 0
 			 }
 			 senao{ 
 			 escreva("Seu carro não esta parado no nosso estacionamento\n")
@@ -75,9 +76,11 @@ programa
 			verificacaoEntrada(opcao)		
 		}
 		funcao verficacaoSaida(){
-			se(opcao<1 ou opcao>30)
+			se(opcao<1 ou opcao>30){
 			escreva("Vaga inválida,digite outra:")
 			leia(opcao)
+			}
+			
 		}
 }
 
@@ -86,7 +89,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1507; 
+ * @POSICAO-CURSOR = 1325; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
