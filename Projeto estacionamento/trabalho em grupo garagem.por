@@ -19,15 +19,11 @@ programa
 		escreva("3- LISTAR VAGAS\n")
 		escreva("4- SAIR DO PROGRAMA\n")
 		escreva("--------------------\n")
-		escreva("Digite uma opção:")
+		escreva("Digite uma opção:\n")
 		leia(menu)
 		limpa()
-
-
-		
-
-		escolha(menu){
-			
+	
+		escolha(menu){			
 			
 			caso '1': entrada()			
 			pare
@@ -35,58 +31,53 @@ programa
 			pare			   
 			caso '3': listarVagas()
 			escreva("\nVaga livre = 0 , Vaga ocupada = 1\n")
-			pare
-			
+			pare			
 			caso '4': x=1
-			pare
-	
-			
-			caso contrario: escreva("Numero inválido")
-			
+			pare				
+			caso contrario: escreva("Numero inválido\n")			
 		}
 	}enquanto(x==0)
-
 				         
 	}
 	funcao  listarVagas(){
 		para(inteiro i=0; i < 30; i++){
 			escreva("\n")
-			escreva(vagas[i])
-
-			
-			
+			escreva(vagas[i])						
 		}
 	}
-
 		funcao verificacao (inteiro &opcao){				
 				se ( opcao >= 0 e opcao <= 30){					
 				escreva("Se dirija a vaga ", opcao,"\n")
 				se(vagas[opcao-1]==0){
-					vagas[opcao-1]=1
-					
+					vagas[opcao-1]=1					
 				}
 			}
 			senao
-				escreva("Vaga inválida\n")
-							 											
+				escreva("Vaga inválida\n")							 											
 		}
 
 		funcao saida(){
-			escreva("Digite a vaga de retirada:")
+			escreva("Digite a vaga de retirada:\n")
 			 leia(opcao)
-			 verificacao(opcao)	
+			 verficacaoSaida()			 			 
 			 se(vagas[opcao-1]==1){
 			 escreva("Seu carro pode ser retirado\n")
 			 }
 			 senao{ 
 			 escreva("Seu carro não esta parado no nosso estacionamento\n")
 			 }
-			 verificacao(opcao)	
+			 
+			 
 		}
 		funcao entrada(){
 			escreva("Escolha uma vaga: (1-30)\n")
 			leia(opcao)
 			verificacao(opcao)		
+		}
+		funcao verficacaoSaida(){
+			se(opcao<1 ou opcao>30)
+			escreva("Vaga inválida,digite outra:")
+			leia(opcao)
 		}
 }
 
@@ -95,7 +86,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1254; 
+ * @POSICAO-CURSOR = 1385; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
