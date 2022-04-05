@@ -23,7 +23,7 @@ CREATE TABLE Cliente (
     cod_cliente serial PRIMARY KEY,
     nome_completo varchar(50),
     nome_usuario varchar(15),
-    email varchar(25),
+    email varchar(50),
     cpf varchar(11),
     data_nascimento date,
     endereco varchar(50)
