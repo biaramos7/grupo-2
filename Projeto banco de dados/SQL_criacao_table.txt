@@ -36,7 +36,7 @@ CREATE TABLE Pedido_realiza (
 );
 
 CREATE TABLE Funcionario (
-    cod_funcionario int PRIMARY KEY,
+    cod_funcionario serial PRIMARY KEY,
     cnpj_empresa varchar(14),
     cpf varchar(12),
     nome varchar(30)
