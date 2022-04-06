@@ -2,15 +2,11 @@ CREATE TABLE Empresa (
     cnpj varchar(14) PRIMARY KEY
 );
 
-CREATE TABLE Produto (
-    cod_produto serial PRIMARY KEY,
-    cod_categoria serial,
-    cnpj_empresa varchar(14),
-    nome varchar(25),
-    descricao varchar(30),
-    quant_estoque int,
-    valor_unitario numeric,
-    data_fabricacao date
+CREATE TABLE Funcionario (
+    cod_funcionario serial PRIMARY KEY,
+    cnpj_empresa varchar(14), FOREIGN KEY (cnpj_empresa) REFERENCES empresa(cnpj),
+    cpf varchar(12),
+    nome varchar(30)
 );
 
 CREATE TABLE Categoria (
@@ -23,21 +19,30 @@ CREATE TABLE Cliente (
     cod_cliente serial PRIMARY KEY,
     nome_completo varchar(50),
     nome_usuario varchar(15),
-    email varchar(25),
+    email varchar(50),
     cpf varchar(11),
     data_nascimento date,
     endereco varchar(50)
 );
 
-CREATE TABLE Pedido_realiza (
-    cod_produto serial,
-    cod_cliente serial,
+CREATE TABLE Produto (
+    cod_produto serial PRIMARY KEY,
+    cod_categoria int, FOREIGN KEY (cod_categoria) REFERENCES categoria(cod_categoria),
+    cnpj_empresa varchar(14), FOREIGN KEY (cnpj_empresa) REFERENCES empresa(cnpj),
+    nome varchar(25),
+    descricao varchar(30),
+    quant_estoque int,
+    valor_unitario numeric,
+    data_fabricacao date
+);
+
+CREATE TABLE Pedido (
+    cod_pedido serial PRIMARY KEY,
+    cod_cliente int, FOREIGN KEY (cod_cliente) REFERENCES cliente(cod_cliente),
     data_pedido date
 );
 
-CREATE TABLE Funcionario (
-    cod_funcionario int PRIMARY KEY,
-    cnpj_empresa varchar(14),
-    cpf varchar(12),
-    nome varchar(30)
+CREATE TABLE Nota (
+    cod_produto int, FOREIGN KEY (cod_produto) REFERENCES produto(cod_produto),
+    cod_pedido int, FOREIGN KEY (cod_pedido) REFERENCES pedido (cod_pedido)
 );

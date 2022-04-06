@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 insert into empresa(cnpj)
       	values('596478923');
 
@@ -27,3 +28,40 @@ insert into cliente(nome_completo,nome_usuario,email,cpf,data_nascimento,enderec
                ('Vinicius Junior','Vinijr','vini.junior@yahoo.com','55555555555','09/11/1996','Rua Realmadrid');
 
 			
+=======
+INSERT INTO empresa(cnpj)
+	  VALUES('596478923');
+
+INSERT INTO funcionario(cnpj_empresa, cpf, nome)
+          VALUES('596478923','115694233','Amanda'),
+		('596478923','126988348','Lucas'),
+		('596478923','136548975','Rafael'),
+		('596478923','156780043','Bia'),
+		('596478923','146689231','Matheus');
+ 
+INSERT INTO categoria(nome, descricao)
+	  VALUES('Bebida','Refrigerante'),
+		('Limpeza','Desinfetante'),
+		('Frios','Presunto'),
+		('Instrumento Musical','Flauta Boliviana'),
+		('Alimento','Comidas');
+
+INSERT INTO cliente(nome_completo, nome_usuario, email, cpf, data_nascimento, endereco)
+	  VALUES('Joaquim Lopez','JQlopez','joaquim.lopes@yahoo.com','11111111111','12/12/2003','Rua Constantino'),
+		('Daniel ALves','Dalves','dani.alves@yahoo.com','22222222222','12/01/1975','Rua Bimot'),
+		('Neymar Junior','Njr','menino.ney@yahoo.com','33333333333','06/05/1992','Rua Psg'),
+		('Casimiro Miguel','Casimito','casimiro.yt@yahoo.com','44444444444','12/09/2003','Rua Lintin'),
+		('Vinicius Junior','Vinijr','vini.junior@yahoo.com','55555555555','09/11/1996','Rua Realmadrid');
+
+INSERT INTO produto(cod_categoria, cnpj_empresa, nome, descricao, quant_estoque, valor_unitario, data_fabricacao)
+	  VALUES('5','596478923','Caixa de bombom','Doce','50','7.99','06/04/2022'),
+		('1','596478923','Guaraná','Refrigerante','20','5.99','01/03/2022'),
+		('3','596478923','Queijo Mussarela (200g)','Frios','15','4.99','25/03/2022'),
+		('2','596478923','Pano de chão','Pano','100','1.99','05/04/2022'),
+		('4','596478923','Flauta Boliviana','Instrumento de sopro','5','29.99','01/02/2022');
+
+
+
+
+
+>>>>>>> 0746de5bfae241a6fb5bec486451fd2cfdcf7e72
