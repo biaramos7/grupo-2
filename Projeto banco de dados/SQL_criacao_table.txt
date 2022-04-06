@@ -39,10 +39,16 @@ CREATE TABLE Produto (
 CREATE TABLE Pedido (
     cod_pedido serial PRIMARY KEY,
     cod_cliente int, FOREIGN KEY (cod_cliente) REFERENCES cliente(cod_cliente),
-    data_pedido date
+    data_pedido date,
+    data_envio date,
+    data_entrega date,
+    status varchar(20)
 );
 
 CREATE TABLE Nota (
     cod_produto int, FOREIGN KEY (cod_produto) REFERENCES produto(cod_produto),
-    cod_pedido int, FOREIGN KEY (cod_pedido) REFERENCES pedido (cod_pedido)
+    cod_pedido int, FOREIGN KEY (cod_pedido) REFERENCES pedido (cod_pedido),
+    quantidade int,
+    desconto numeric,
+    valor_venda numeric
 );
