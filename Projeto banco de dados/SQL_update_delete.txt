@@ -1,0 +1,6 @@
+UPDATE nota 
+SET cod_produto = 1
+WHERE cod_pedido = 3;
+
+DELETE FROM funcionario 
+WHERE nome  = 'Bia';

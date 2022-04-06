@@ -1,0 +1,12 @@
+SELECT p.nome,p.valor_unitario ,c.descricao ,c.nome 
+FROM produto p ,categoria c 
+WHERE p.cod_categoria = c.cod_categoria;
+
+SELECT c.nome_completo,c.cpf  ,p.data_pedido
+FROM cliente c,pedido p 
+WHERE c.cod_cliente = p.cod_cliente
+
+SELECT COUNT(*) from produto;
+
+SELECT * FROM cliente c
+
