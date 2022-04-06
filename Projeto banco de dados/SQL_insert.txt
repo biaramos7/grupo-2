@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+insert into empresa(cnpj)
+      	values('596478923');
+
+
+ AINDA TA ERRADO É UAI
+//insert into funcionario(cpf,nome)
+             values('115694233','Amanda'),
+                   ('126988348','Lucas'),
+                   ('136548975','Rafael'),
+                   ('156780043','Bia'),
+                   ('146689231','Matheus');//
+ 
+
+
+insert into categoria(nome,descricao)
+				values('Bebida','Refrigerante'),
+					  ('Limpeza','Desinfetante'),
+					  ('Frios','Presunto'),
+					  ('Instrumento Musical','Flauta Boliviana);
+
+
+insert into cliente(nome_completo,nome_usuario,email,cpf,data_nascimento,endereco)
+         values('Joaquim Lopez','JQlopez','joaquim.lopes@yahoo.com','11111111111','12/12/2003','Rua Constantino'),
+               ('Daniel ALves','Dalves','dani.alves@yahoo.com','22222222222','12/01/1975','Rua Bimot'),
+               ('Neymar Junior','Njr','menino.ney@yahoo.com','33333333333','06/05/1992','Rua Psg'),
+               ('Casimiro Miguel','Casimito','casimiro.yt@yahoo.com','44444444444','12/09/2003','Rua Lintin'),
+               ('Vinicius Junior','Vinijr','vini.junior@yahoo.com','55555555555','09/11/1996','Rua Realmadrid');
+
+			
+=======
 INSERT INTO empresa(cnpj)
 	  VALUES('596478923');
 
@@ -36,5 +67,12 @@ INSERT INTO pedido(cod_cliente,data_pedido)
                 (5,'23/01/22'),
                 (2,'26/01/22');
 
+<<<<<<< HEAD
 INSERT INTO nota(cod_produto,cod_pedido)
         VALUES(2,1), (3,2), (4,3), (4,5), (5,5);
+=======
+
+
+
+>>>>>>> 0746de5bfae241a6fb5bec486451fd2cfdcf7e72
+>>>>>>> ac9d10bf2aee924405a56ed24e0e51dad1dd6d0c
