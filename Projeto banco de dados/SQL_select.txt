@@ -10,3 +10,11 @@ SELECT COUNT(*) from produto;
 
 SELECT * FROM cliente c
 
+SELECT nota.cod_produto, pedido.cod_pedido, cliente.nome_completo ,produto.nome, 
+nota.quantidade,produto.valor_unitario, nota.quantidade*produto.valor_unitario AS total_sem_desconto, 
+nota.desconto, nota.valor_venda
+FROM nota ,cliente  ,produto ,pedido
+WHERE cliente.cod_cliente = pedido.cod_cliente AND pedido.cod_pedido=nota.cod_pedido 
+AND nota.cod_produto = produto.cod_produto 
+
+
